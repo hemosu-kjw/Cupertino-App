@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'sub/first_page.dart';
 import 'sub/second_page.dart';
 import 'sub/third_page.dart';
-import 'sub/fourth_page.dart';
+import 'sub/other_page.dart';
 
 class MainBottomNaviFabPage extends StatefulWidget {
   //const MainBottomNaviFabPage({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _MainBottomNaviFabPageState extends State<MainBottomNaviFabPage> {
     FirstPage(),
     SecondPage(),
     ThirdPage(),
-    FourthPage(),
+    OtherPage(),
   ];
 
   @override

@@ -21,11 +21,17 @@ class MyApp extends StatelessWidget {
     return GetCupertinoApp(
         title: appTitle,
         theme: CupertinoThemeData(
-          brightness: Brightness.light,
-          // primaryColor: Colors.orange,
-          // barBackgroundColor: Colors.deepOrange,
-          // scaffoldBackgroundColor: Colors.orange,
-        ),
+            brightness: Brightness.light, //dark
+            primaryColor: CupertinoDynamicColor.withBrightness(
+              color: CupertinoColors.systemRed,
+              darkColor: CupertinoColors.systemGreen,
+            ),
+            barBackgroundColor: CupertinoDynamicColor.withBrightness(
+              color: CupertinoColors.white,
+              darkColor: CupertinoColors.black,
+            )
+            // scaffoldBackgroundColor: Colors.orange,
+            ),
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         getPages: GetXRouter.routes);

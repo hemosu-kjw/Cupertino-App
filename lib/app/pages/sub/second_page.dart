@@ -6,7 +6,6 @@ class SecondPage extends StatelessWidget {
   final String appTitle = 'Title';
 
   @override
-  @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(

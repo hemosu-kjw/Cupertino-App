@@ -15,9 +15,16 @@ class MainCupertinoNaviPage extends StatefulWidget {
 class _MainCupertinoNaviPageState extends State<MainCupertinoNaviPage> {
   @override
   Widget build(BuildContext context) {
+    //
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        previousPageTitle: 'Explore',
         middle: Text('Cupertino Style UI'),
+        trailing: CupertinoButton(
+          padding: EdgeInsets.zero,
+          child: Text('done'),
+          onPressed: () {},
+        ),
       ),
       child: CupertinoTabScaffold(
         tabBar: CupertinoTabBar(
