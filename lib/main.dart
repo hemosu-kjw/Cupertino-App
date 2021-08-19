@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'app/routes/not_found_route.dart';
 import 'app/routes/routes.dart';
 
 void main() => runApp(MyApp());
@@ -19,21 +20,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetCupertinoApp(
-        title: appTitle,
-        theme: CupertinoThemeData(
-            brightness: Brightness.light, //dark
-            primaryColor: CupertinoDynamicColor.withBrightness(
-              color: CupertinoColors.systemRed,
-              darkColor: CupertinoColors.systemGreen,
-            ),
-            barBackgroundColor: CupertinoDynamicColor.withBrightness(
-              color: CupertinoColors.white,
-              darkColor: CupertinoColors.black,
-            )
-            // scaffoldBackgroundColor: Colors.orange,
-            ),
-        debugShowCheckedModeBanner: false,
-        initialRoute: '/',
-        getPages: GetXRouter.routes);
+      title: appTitle,
+      theme: CupertinoThemeData(
+          brightness: Brightness.light, //dark
+          primaryColor: CupertinoDynamicColor.withBrightness(
+            color: CupertinoColors.systemRed,
+            darkColor: CupertinoColors.systemGreen,
+          ),
+          barBackgroundColor: CupertinoDynamicColor.withBrightness(
+            color: CupertinoColors.white,
+            darkColor: CupertinoColors.black,
+          )
+          // scaffoldBackgroundColor: Colors.orange,
+          ),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      getPages: GetXRouter.routes,
+      unknownRoute: GetPage(
+        name: '/notFound',
+        page: () => NotFoundRoute(),
+      ),
+    );
   }
 }
