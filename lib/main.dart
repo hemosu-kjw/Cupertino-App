@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:start_flutter/app/routes/app_pages.dart';
 import 'app/routes/not_found_route.dart';
-import 'app/routes/routes.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,8 +34,8 @@ class MyApp extends StatelessWidget {
           // scaffoldBackgroundColor: Colors.orange,
           ),
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      getPages: GetXRouter.routes,
+      initialRoute: AppPages.INITIAL,
+      getPages: AppPages.routes,
       unknownRoute: GetPage(
         name: '/notFound',
         page: () => NotFoundRoute(),
