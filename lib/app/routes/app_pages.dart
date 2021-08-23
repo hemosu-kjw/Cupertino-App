@@ -9,12 +9,11 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
-  static const OTHER = Routes.OTHER;
+  static const INITIAL = Routes.MAIN;
 
   static final routes = [
     GetPage(
-      name: _Paths.HOME,
+      name: _Paths.MAIN,
       page: () => MainCupertinoV2Page(),
       binding: MainBinding(),
     ),
